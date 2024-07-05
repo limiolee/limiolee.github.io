@@ -14,7 +14,7 @@ tags:
 
 ## 软件推荐
 * Thonny: 它是一个开源软件。支持安装即使用，无需配置环境，对新手比较友好！！
-* 科学上网，可以从谷歌云盘直接下载👉：[Thonny v3.2.5]([https://drive.google.com/file/d/1U9spJdKoDs1KbSllGatyOFzYxDAQ_qjV/view?usp=sharing)
+* 科学上网，可以从谷歌云盘直接下载👉：[Thonny v3.2.5](https://drive.google.com/file/d/1U9spJdKoDs1KbSllGatyOFzYxDAQ_qjV/view?usp=sharing)
 * 从我的gitee仓库，直接下载👉：[Thonny](https://gitee.com/ChrisLee-Codes/python_exercises/raw/master/thonny.zip)
 * 从我的阿里云存储器上，直接下载👉：[thonny v3.2.5](https://syc-public.oss-cn-shanghai.aliyuncs.com/user/ChrisLee/src/thonny-3_1720154241428.zip)
 * 如果想安装一些第三方库，可以使用下面这句代码
