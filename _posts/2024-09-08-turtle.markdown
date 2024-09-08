@@ -12,10 +12,50 @@ tags:
 
 ---
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dynamic iframe height example</title>
+<style>
+  .responsive-iframe {
+    width: 100%;
+    border: none;
+  }
+</style>
+<script>
+  function adjustIframeHeight(iframeId) {
+    var iframe = document.getElementById(iframeId);
+    if (iframe.contentWindow) { // Check to ensure it's not cross-origin
+      var iframeDoc = iframe.contentWindow.document;
+      var iframeBody = iframeDoc.body;
+      var iframeDocElem = iframeDoc.documentElement;
+      var height = Math.max(iframeBody.scrollHeight, iframeBody.offsetHeight,
+                            iframeDocElem.clientHeight, iframeDocElem.scrollHeight, iframeDocElem.offsetHeight);
+      iframe.style.height = height + 'px';
+    }
+  }
+
+  window.onload = function() {
+    var iframe = document.getElementById('chart');
+    // Wait for the iframe content to load before adjusting its height
+    if (iframe.attachEvent ? (iframe.readyState === 'complete' || iframe.readyState === 'loaded') : iframe.complete) {
+      adjustIframeHeight('chart'); // Content is already loaded
+    } else {
+      iframe.onload = function() {
+        adjustIframeHeight('chart'); // Content has finished loading
+      };
+    }
+  };
+</script>
+</head>
+<body>
 <iframe 
   id="chart"
   src="https://bc.scratchor.com/python/index.html"
-  frameborder="0" 
-  scrolling="no" 
-  style="width: 100%">
-</iframe>
+  frameborder="0"
+  scrolling="auto"
+  class="responsive-iframe"
+></iframe>
+</body>
+</html>
