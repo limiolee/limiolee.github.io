@@ -19,6 +19,6 @@ tags:
     src="https://bc.scratchor.com/python/index.html"
     frameborder="0" 
     scrolling="no"
-    style="position: absolute; top: 0; left: 0; width: 150%; height: 150%;">
+    style="position: absolute; top: 0; left: 0; width: 110%; height: 110%;">
   </iframe>
 </div>
